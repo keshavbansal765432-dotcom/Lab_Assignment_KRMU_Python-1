@@ -51,7 +51,7 @@ def calc_avg_calorie():
     rounded_avg_calorie = round(avg_calorie,2)
     return rounded_avg_calorie
 
-
+#main code stars here
 Meal = []
 Calories = []
 num_MEALS = int(input("Enter the number of meals you want to add - "))
@@ -70,7 +70,7 @@ print("Total amount of your calorie intake is - ", float(CALORIE_SUM))
 
 if do_you_want_permission("Do you want to see the average calories per meal?"):
     print("Calculating your data...")
-    print(calc_avg_calorie())
+    print(calc_avg_calorie())        #calculating and printing the average
 else:
     print("Action cancelled")
 
@@ -89,7 +89,6 @@ if CALORIE_SUM > DAILY_LIMIT :
 else:
     print("Your calorie intake for today is in your daily limit.")
 
-
 print("Meal name\tCalories")
 print("--------------------------")
 print(f"{Meal[0]}\t{Calories[0]}")
@@ -98,6 +97,7 @@ for j in range(1,num_MEALS):
 print(f"Total calorie\t{CALORIE_SUM}")
 print(f"Average calorie\t{calc_avg_calorie()}")
 
+# process of saving tha daily log starts here
 if do_you_want_permission("Do you want to save todays report"):
     print("Proceeding with action")
     filename = input("Enter the name as of the file to be created! - ").strip()
